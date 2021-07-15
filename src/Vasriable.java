@@ -16,5 +16,14 @@ public class Vasriable {
         age = 31;
 
         System.out.println(age);
+
+        //menentukan variable constant / tidak dapat diubah lagi dengan menggunakan keyword final
+
+        final String study = " Belajar Java";
+
+        /*
+            -> variable study tidak dapat diubah lagi,
+                karena terdapat keyword final
+         */
     }
 }
