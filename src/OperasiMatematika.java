@@ -47,5 +47,19 @@ public class OperasiMatematika {
         b *= 10;
         System.out.println(b);
 
+
+        /*
+            Unarry operator
+         */
+
+
+        int c = 100;
+
+        c++;
+        System.out.println(c);
+
+        c--;
+        System.out.println(c);
+
     }
 }
