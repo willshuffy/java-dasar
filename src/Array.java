@@ -40,5 +40,20 @@ public class Array {
         long[] arrayLong = new long[]{
                 10L, 20L, 30L
         };
+
+
+        /*
+            Array di dalam array
+         */
+
+        String[][] members= {
+                {"Willy", "Saputra"},
+                {"Bruce", "Wayne"},
+                {"joko"}
+        };
+
+        System.out.println(members[0][0]);
+        System.out.println(members[1][0]);
+        System.out.println(members[2][0]);
     }
 }
