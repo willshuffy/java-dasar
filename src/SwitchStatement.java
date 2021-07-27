@@ -18,5 +18,18 @@ public class SwitchStatement {
             default:
                 System.out.println("mungkin anda salah jurusan");
         }
+
+        /*
+                Switch Lambda statement
+         */
+
+        switch (nilai){
+            case "A" -> System.out.println("Cumlaude");
+            case "B","C" -> System.out.println("lulus");
+            case "D" -> System.out.println("tidak lulus");
+            default ->{
+                System.out.println("drop out");
+            }
+        }
     }
 }
