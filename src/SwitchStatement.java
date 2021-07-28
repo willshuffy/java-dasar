@@ -31,5 +31,37 @@ public class SwitchStatement {
                 System.out.println("drop out");
             }
         }
+
+        /*
+                Switch case Yield
+         */
+
+
+        // Switch tanpa yield
+        nilai = "A";
+
+        String ucapan;
+        switch (nilai){
+            case "A" -> ucapan = "Cumlaude";
+            case "B","C" -> ucapan = "lulus";
+            case "D" -> ucapan =  "tidak lulus";
+            default -> ucapan = "drop out";
+        }
+            System.out.println(ucapan);
+
+
+        // Switch dengan yield
+        nilai = "D";
+        ucapan = switch (nilai){
+            case "A" :
+                yield "Cumlaude";
+            case "B","C":
+                yield  "lulus";
+            case "D" :
+                yield "tidak lulus";
+            default :
+                yield "drop out";
+        };
+        System.out.println(ucapan);
     }
 }
