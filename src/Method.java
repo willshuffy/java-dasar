@@ -12,11 +12,33 @@ public class Method {
 
     public static void main(String[] args) {
         sayHelloWorld();
+
+        //[STEP 2]
+        sayHelloName("Willy", "Saputra");
+        sayHelloName("Bruce", "Wayne");
     }
 
     static void sayHelloWorld() {
         System.out.println("Hello World 1");
         System.out.println("Hello World 2");
         System.out.println("Hello World 3");
+    }
+
+    /**
+     *
+     * ============================== Method Parameter ==============================
+     *
+     * time : 3:00:14
+     *
+     * Kita bisa mengirim informasi ke method yang ingin kita panggil
+     * Untuk melakukan hal tersebut, kita perlu menambahkan parameter atau argument di method yg sudah kita buat
+     * Cara membuat parameter sama seperti cara membuat variabel
+     * Parameter ditempatkan di dalam kurung () dideklarasi method
+     * Parameter bisa lebih dari satu, jika lebih dari satu, harus dipisah menggunakan tanda koma
+     */
+
+    //[STEP 1]
+    static void sayHelloName(String firstName, String lastName){
+        System.out.println("Hello " + firstName + " " + lastName);
     }
 }
