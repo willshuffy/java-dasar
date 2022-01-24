@@ -26,6 +26,13 @@ public class Method {
         System.out.println(hitung(500, "+", 100));
         System.out.println(hitung(2000, "-", 100));
         System.out.println(hitung(200, "salah", 100));
+
+        //[STEP 2] --------- menggunakan contoh array ---------
+        int[] values = {80, 80, 80, 80, 80};
+        rapotBelajar("willy", values);
+
+        //[STEP 2] --------- menggunakan Variable Argument ---------
+        rapotKuliah("willy", 90,55,75,65,45);
     }
 
     static void sayHelloWorld() {
@@ -84,6 +91,54 @@ public class Method {
                 return value1 - value2;
             default:
                 return 0;
+        }
+    }
+
+    /**
+     *
+     * ============================== Method Variable Argument ==============================
+     *
+     * time : 3:10:00
+     *
+     * Kadang kita butuh mengirim data ke method sejumlah data yang tidak pasti
+     * Biasanya, agar bisa seperti ini, kita akan menggunakan array sebagai parameter di method tersebut
+     * Namun di java, kita bisa menggunakan variable argument, untuk mengirim data yang berisi jumlah tak tentu,
+     * ~bisa nol atau lebih
+     * Parameter dengan tipe variable argument, hanya bisa ditempatkan di posisi akhir parameter
+     *
+     *
+     */
+
+
+    //[STEP 1] --------- menggunakan contoh array ---------
+    static void rapotBelajar(String name, int[] values){
+        var total = 0;
+        for (var value : values){
+            total += value;
+        }
+
+        var finalValue = total / values.length;
+
+        if (finalValue >= 75){
+            System.out.println("Selamat " + name + ", anda lulus");
+        }else {
+            System.out.println("Maaf " + name + ", Anda tidak lulus");
+        }
+    }
+
+    //[STEP 1] --------- menggunakan Variable Argument ---------
+    static void rapotKuliah(String name, int... values){ // hanya mengubah int[], menjadi int...
+        var total = 0;
+        for (var value : values){
+            total += value;
+        }
+
+        var finalValue = total / values.length;
+
+        if (finalValue >= 75){
+            System.out.println("Selamat " + name + ", anda lulus");
+        }else {
+            System.out.println("Maaf " + name + ", Anda tidak lulus");
         }
     }
 }
