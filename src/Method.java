@@ -33,6 +33,11 @@ public class Method {
 
         //[STEP 2] --------- menggunakan Variable Argument ---------
         rapotKuliah("willy", 90,55,75,65,45);
+
+        //[STEP2]
+        sayHello();
+        sayHello("Bruce");
+        sayHello("Bruce","robin");
     }
 
     static void sayHelloWorld() {
@@ -140,5 +145,30 @@ public class Method {
         }else {
             System.out.println("Maaf " + name + ", Anda tidak lulus");
         }
+    }
+
+    /**
+     *
+     * ============================== Method Overloading ==============================
+     *
+     * time : 3:16:25
+     *
+     * Method Overloading adalah kemampuan membuat method dengan nama yang sama lebih dari sekali
+     * Namun ada ketentuannya, yaitu data parameter di method tersebut harus berbeda-beda, entah jumlah atau tipe data
+     * ~parameternya
+     * Jika ada yang sama, maka program java kita akan error
+     */
+
+    //[STEP1]
+    static void sayHello(){
+        System.out.println("Hello");
+    }
+
+    static void sayHello(String name){
+        System.out.println("Hello " + name);
+    }
+
+    static void sayHello(String firstName, String lastName){
+        System.out.println("Hello " + firstName + " " + lastName);
     }
 }
