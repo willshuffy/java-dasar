@@ -38,6 +38,13 @@ public class Method {
         sayHello();
         sayHello("Bruce");
         sayHello("Bruce","robin");
+
+        //[step2] --------- Menggunakan contoh Factorial Loop ---------
+        System.out.println(factorialLoop(5));
+
+        //[step2] --------- Menggunakan contoh Factorial Recursive ---------
+        System.out.println(factorialRecursive(5));
+
     }
 
     static void sayHelloWorld() {
@@ -170,5 +177,37 @@ public class Method {
 
     static void sayHello(String firstName, String lastName){
         System.out.println("Hello " + firstName + " " + lastName);
+    }
+
+    /**
+     * ============================== Method Recursive ============================
+     *
+     * time : 3:19:33
+     *
+     * Method Recursive adalah kemampuan method memanggil method dirinya sendiri
+     * Kadang memang ada byk problem, yang lebih mudah diselesaikan menggunakan method recursive, seperti contohnya
+     * ~kasus factorial
+     *
+     */
+
+
+    //[step1] --------- Menggunakan contoh Factorial Loop ---------
+    static int factorialLoop(int value){
+
+        var result = 1;
+
+        for ( var counter = 1; counter <= value; counter++){
+            result *= counter;
+        }
+        return  result;
+    }
+
+    //[step1] --------- Menggunakan contoh Factorial Recursive ---------
+    static int factorialRecursive(int value){
+        if (value == 1){
+            return 1;
+        }else {
+            return value * factorialRecursive(value - 1);
+        }
     }
 }
